@@ -24,7 +24,6 @@ axios
     .then((res) => {
         console.log(`This is the data:`, res);
         let mainTopics = Object.entries(res.data.articles)
-        console.log(mainTopics);
         mainTopics.forEach((topicArray) => {
             topicArray[1].forEach((title) => {
                 cardsContainer.appendChild(CardBuilder(title))
